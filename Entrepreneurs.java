@@ -4,6 +4,7 @@ public class Entrepreneurs extends Employees{
 
     private double revenue;
     private double expenses;
+    private int id;
     public Entrepreneurs(String name) {
         super(name);
     }
@@ -32,12 +33,12 @@ public class Entrepreneurs extends Employees{
         return revenue - expenses;
     }
 
-
     @Override
     public String toString() {
         return "Entrepreneurs{" +
                 "revenue=" + revenue +
                 ", expenses=" + expenses +
+                ", id=" + getId() +
                 '}';
     }
 }
