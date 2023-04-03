@@ -1,6 +1,6 @@
 package OOP;
 
-public class People {
+public abstract class People {
     private String name;
 
     public People(String name) {

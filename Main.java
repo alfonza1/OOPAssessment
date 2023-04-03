@@ -13,7 +13,7 @@ public class Main {
         Entrepreneurs entre1 = new Entrepreneurs("dan",10000,100);
         System.out.println(entre1);
 
-        Payable[] payable = new Payable[]{fonza, employee2, entre1};
+        Payable[] payable = new Payable[]{fonza, employee2};
         for (int i = 0; i < payable.length; i++) {
             Employees employee = (Employees) payable[i];
             System.out.println(employee.getName() + "'s pay: " + payable[i].calculatePay());

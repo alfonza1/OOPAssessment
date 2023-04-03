@@ -1,10 +1,10 @@
 package OOP;
 
-public class Entrepreneurs extends Employees{
+public class Entrepreneurs extends People{
 
     private double revenue;
     private double expenses;
-    private int id;
+
     public Entrepreneurs(String name) {
         super(name);
     }
@@ -38,7 +38,6 @@ public class Entrepreneurs extends Employees{
         return "Entrepreneurs{" +
                 "revenue=" + revenue +
                 ", expenses=" + expenses +
-                ", id=" + getId() +
                 '}';
     }
 }
