@@ -1,8 +1,7 @@
 package OOP;
 
-public class Salaried extends Employees {
+public class Salaried extends Employees  {
     private double salary;
-    private int id;
 
 
     public Salaried(String name,double salary) {
@@ -10,6 +9,10 @@ public class Salaried extends Employees {
         this.salary = salary;
 
     }
+    @Override
+   public void printBadge(){
+        System.out.println( getId());
+   }
 
     public double getSalary() {
         return this.salary;
@@ -26,10 +29,8 @@ public class Salaried extends Employees {
                 ", id=" + getId() +
                 '}';
     }
-
-
-    @Override
+@Override
     public double calculatePay() {
-        return salary;
+        return salary / 12 ;
     }
 }

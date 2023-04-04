@@ -1,12 +1,17 @@
 package OOP;
 
-public class Hourly extends Employees {
+public class Hourly extends Employees  {
     private int hoursWorked;
     private double rate;
     private int id;
 
     public Hourly(String name) {
         super(name);
+    }
+
+    @Override
+    public void printBadge() {
+        System.out.println(getId());
     }
 
     @Override
@@ -37,5 +42,6 @@ public class Hourly extends Employees {
 
     public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
+
     }
 }

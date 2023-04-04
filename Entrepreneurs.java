@@ -1,6 +1,6 @@
 package OOP;
 
-public class Entrepreneurs extends People{
+public class Entrepreneurs extends Person {
 
     private double revenue;
     private double expenses;
@@ -29,6 +29,8 @@ public class Entrepreneurs extends People{
     public void setExpenses(double expenses) {
         this.expenses = expenses;
     }
+
+@Override
     public double calculatePay() {
         return revenue - expenses;
     }
@@ -40,4 +42,5 @@ public class Entrepreneurs extends People{
                 ", expenses=" + expenses +
                 '}';
     }
+
 }

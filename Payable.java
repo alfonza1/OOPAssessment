@@ -2,6 +2,6 @@ package OOP;
 
 public interface Payable {
 
-        double calculatePay();
+        public abstract double calculatePay();
 
 }
