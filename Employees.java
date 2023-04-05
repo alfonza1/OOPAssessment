@@ -5,13 +5,14 @@ public abstract class Employees extends Person {
 
     private static int uniqueId = 0;
     private static int id;
+    private Cloth[] clothes;
 
-    public Employees(String name) {
-        super(name);
+
+    public Employees(String name,Cloth[] clothes) {
+        super(name,clothes);
        this.id = ++uniqueId;
+       this.clothes = clothes;
     }
-
-
 
    public abstract void printBadge();
     public int getId() {
@@ -19,5 +20,5 @@ public abstract class Employees extends Person {
     }
 
 
-
+    public abstract double calculateDiscount();
 }

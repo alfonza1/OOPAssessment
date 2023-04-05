@@ -4,17 +4,26 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Salaried fonza = new Salaried("Alfonza",1000000);
-       fonza.printBadge();
-       //Employees.printBadge();
-        Hourly employee2 = new Hourly("mike",10,10);
-        //System.out.println(employee2.getId());
-employee2.printBadge();
-        Entrepreneurs entre1 = new Entrepreneurs("dan",10000,100);
-        System.out.println(entre1);
 
-       Person[] payable = {fonza,employee2,entre1};
-Person.printPay(payable);
+
+
+       Cloth hoodie = new Cloth("Sp5der Hoodie", 220.0);
+        Cloth hoodieTwo = new Cloth("Sp5der Hoodie", 220.0);
+        Cloth hoodieThree = new Cloth("Sp5der Hoodie", 220.0);
+        Cloth hoodieFour = new Cloth("Sp5der Hoodie", 220.0);
+       Cloth[] hoodies = {hoodie, hoodieTwo, hoodieThree, hoodieFour};
+
+        Salaried fonza = new Salaried("Alfonza",1000000,hoodies);
+        System.out.println(fonza.calculateDiscount());
+
+        Manager mikaila = new Manager("Mikaila",hoodies);
+        System.out.println(mikaila.calculateDiscount());
+
+        Hourly hourly = new Hourly("IDK",1,1,hoodies);
+        System.out.println(hourly.calculateDiscount());
+
+        Entrepreneurs entre = new Entrepreneurs("IDK",1,1,hoodies);
+        System.out.println(entre.calculateDiscount());
 
 
 

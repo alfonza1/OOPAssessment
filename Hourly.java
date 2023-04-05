@@ -3,10 +3,14 @@ package OOP;
 public class Hourly extends Employees  {
     private int hoursWorked;
     private double rate;
-    private int id;
+    private Cloth[] clothes;
 
-    public Hourly(String name) {
-        super(name);
+
+    public Hourly(String name,int hoursWorked, double rate,Cloth[] clothes) {
+        super(name,clothes);
+        this.hoursWorked = hoursWorked;
+        this.rate = rate;
+        this.clothes = clothes;
     }
 
     @Override
@@ -17,14 +21,6 @@ public class Hourly extends Employees  {
     @Override
     public double calculatePay() {
         return hoursWorked * rate;
-    }
-
-
-    public Hourly(String name,int hoursWorked, double rate) {
-        super(name);
-        this.hoursWorked = hoursWorked;
-        this.rate = rate;
-
     }
 
     @Override
@@ -43,5 +39,14 @@ public class Hourly extends Employees  {
     public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
 
+    }
+
+    @Override
+    public double calculateDiscount() {
+        double sum = 0;
+        for (int i = 0; i < clothes.length; i++) {
+            sum += clothes[i].getPrice();
+        }
+        return sum * 0.1;
     }
 }

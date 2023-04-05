@@ -2,11 +2,12 @@ package OOP;
 
 public class Salaried extends Employees  {
     private double salary;
+private Cloth[] clothes;
 
-
-    public Salaried(String name,double salary) {
-        super(name);
+    public Salaried(String name,double salary,Cloth[] clothes) {
+        super(name,clothes);
         this.salary = salary;
+        this.clothes = clothes;
 
     }
     @Override
@@ -33,4 +34,16 @@ public class Salaried extends Employees  {
     public double calculatePay() {
         return salary / 12 ;
     }
+
+    @Override
+    public double calculateDiscount() {
+        double sum = 0;
+        for (int i = 0; i < clothes.length; i++) {
+            sum += clothes[i].getPrice();
+        }
+    return sum * 0.1;
+    }
+
+
+
 }

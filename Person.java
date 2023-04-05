@@ -2,9 +2,11 @@ package OOP;
 
 public abstract class Person implements Payable{
     private String name;
+    private Cloth[] clothingItems;
 
-    public Person(String name) {
+    public Person(String name,Cloth[] clothes) {
         this.name = name;
+        this.clothingItems = clothes;
     }
 
     public String getName() {
@@ -20,8 +22,7 @@ public abstract class Person implements Payable{
             else {
                 System.out.println("not payable");
             }
-        }
+        }}
 
-    }
-
+    public abstract double calculateDiscount();
 }
