@@ -1,10 +1,11 @@
 package OOP;
 
-public class Entrepreneurs extends Person {
+public class Entrepreneurs extends Person implements Discountable {
 
     private double revenue;
     private double expenses;
     private Cloth[] clothes;
+    private final double DISCOUNT = 0.02;
 
     public Entrepreneurs(String name,double revenue,double expenses,Cloth[] clothes) {
         super(name,clothes);
@@ -40,17 +41,16 @@ public class Entrepreneurs extends Person {
         return revenue - expenses;
     }
 
-    @Override
-    public double calculateDiscount() {
 
+    @Override
+    public double calculateDiscount(Cloth[] clothes) {
         double sum = 0;
         for (int i = 0; i < clothes.length; i++) {
             sum += clothes[i].getPrice();
         }
-        return sum * 0.02;
+
+        return DISCOUNT * sum;
     }
-
-
 
     @Override
     public String toString() {

@@ -1,26 +1,17 @@
 package OOP;
 
-public class Manager extends Employees{
+public class Manager extends Employees implements Discountable {
 
     private Cloth[] clothes;
 
-
-   public Manager(String name,Cloth[] clothes){
-       super(name,clothes);
+    private boolean isManager = true;
+   public Manager(String name,Cloth[] clothes,boolean istrue){
+       super(name,clothes,istrue);
        this.clothes = clothes;
+       isManager = istrue;
    }
 
-    @Override
-    public double calculateDiscount() {
-        double sum = 0;
-        for (int i = 0; i < clothes.length; i++) {
-            sum += clothes[i].getPrice();
-        }
-        return sum * 0.15;
-    }
-
-
-    @Override
+   @Override
     public void printBadge() {
         System.out.println(getId());
     }

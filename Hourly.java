@@ -41,12 +41,5 @@ public class Hourly extends Employees  {
 
     }
 
-    @Override
-    public double calculateDiscount() {
-        double sum = 0;
-        for (int i = 0; i < clothes.length; i++) {
-            sum += clothes[i].getPrice();
-        }
-        return sum * 0.1;
-    }
+
 }
