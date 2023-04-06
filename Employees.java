@@ -7,6 +7,7 @@ public abstract class Employees extends Person implements Discountable {
     private static int id;
     private Cloth[] clothes;
     private final double DISCOUNT = 0.1;
+    private final double MANAGERDISCOUNT = 0.15;
     private boolean isManager;
 
    public Employees(String name,Cloth[] clothes) {
@@ -35,7 +36,7 @@ public abstract class Employees extends Person implements Discountable {
             sum += clothes[i].getPrice();
         }
     if(isManager == true){
-    return DISCOUNT  * sum * 1.05;
+    return MANAGERDISCOUNT  * sum;
     }
 
        else {

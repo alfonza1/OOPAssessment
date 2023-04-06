@@ -20,9 +20,10 @@ public class Main {
         Manager mikaila = new Manager("Mikaila",hoodies,true);
         System.out.println(mikaila.calculateDiscount(hoodies));
 
-        Entrepreneurs entre = new Entrepreneurs("IDK",1,1,hoodies);
+        Entrepreneurs entre = new Entrepreneurs("IDK",100,1,hoodies);
         System.out.println(entre.calculateDiscount(hoodies));
-
+        Person[] s = {entre,fonza};
+        Person.printPay(s);
 
 
     }
